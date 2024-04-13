@@ -15,14 +15,12 @@ const TaskList = ({ taskList }: Props) => {
     <>
       {taskList.length > 0 ? (
         taskList.map((task) => (
-          <div key={task.id}>
-            <div>
-              <h4>
-                {task.title}
-                <p>Dificuldade: {task.difficulty}</p>
-              </h4>
+          <div key={task.id} className={styles.task}>
+            <div className={styles.details}>
+              <h4>{task.title}</h4>
+              <p>Dificuldade: {task.difficulty}</p>
             </div>
-            <div>
+            <div className={styles.actions}>
               <i className="bi bi-pencil"></i>
               <i className="bi bi-trash"></i>
             </div>
